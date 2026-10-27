@@ -1,0 +1,69 @@
+---
+fullname: CwF-like structure of the de Bruijn encoding
+shortname: CwFdeBruijn
+opam_name: rocq-CwFdeBruijn
+organization: CalosciMatteo
+community: false
+action: false
+dune: false
+coqdoc: false
+
+synopsis: Formalization of constructions on unityped weak categories with families and of presentations for the binding syntax of the lambda calculus
+
+description: |-
+  Formalization of constructions on unityped weak categories with families and of presentations for the binding syntax of the lambda calculus
+
+authors:
+- name: Matteo Calosci
+  initial: true
+
+maintainers:
+- name: Matteo Calosci
+  nickname: CalosciMatteo
+
+opam-file-maintainer: calosci.matteo98@gmail.com
+
+opam-file-version: dev
+
+license:
+  fullname: MIT License
+  identifier: MIT
+
+# supported_coq_versions:
+#   text: 8.20
+#   opam: '{= "8.20.1"}'
+supported_coq_versions:
+  text: '9.0'
+  opam: '{>= "9.0"}'
+
+dependencies:
+- opam:
+    name: coq-category-theory
+    version: '{dev}'
+  description: |-
+    [Category Theory in Coq](https://github.com/jwiegley/category-theory)
+# pin-depends: [
+#   ["coq-category-theory.dev" "git+https://github.com/jwiegley/category-theory.git#37f1cf6b23b14685a3df943f09e42da0046b2db7"]
+# ]
+- opam:
+    name: rocq-mathcomp-boot
+    version: '{>= "2.6.0"}'
+  description: |-
+    [MathComp boot](https://math-comp.github.io/)
+
+tested_coq_opam_versions:
+- version: '8.20.1'
+
+namespace: CwFdeBruijn
+
+build: |-
+  ## Building instruction:
+  Use [OPAM](https://opam.ocaml.org/doc/Install.html):
+  ```shell
+  opam switch create rocq-env 5.4.0
+  eval $(opam env)
+  opam repo add rocq-released https://rocq-prover.org/opam/released
+  opam install . --deps-only
+  make
+  ```
+---

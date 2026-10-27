@@ -1,0 +1,33 @@
+# This file was generated from `meta.yml`, please do not edit manually.
+# Follow the instructions on https://github.com/coq-community/templates to regenerate.
+
+opam-version: "2.0"
+maintainer: "calosci.matteo98@gmail.com"
+version: "dev"
+
+homepage: "https://github.com/CalosciMatteo/CwFdeBruijn"
+dev-repo: "git+https://github.com/CalosciMatteo/CwFdeBruijn.git"
+bug-reports: "https://github.com/CalosciMatteo/CwFdeBruijn/issues"
+license: "MIT"
+
+synopsis: "Formalization of constructions on unityped weak categories with families and of presentations for the binding syntax of the lambda calculus"
+description: """
+Formalization of constructions on unityped weak categories with families and of presentations for the binding syntax of the lambda calculus"""
+
+build: [make "-j%{jobs}%"]
+install: [make "install"]
+depends: [
+  "coq" {>= "9.0"}
+  "coq-category-theory" {dev}
+  "rocq-mathcomp-boot" {>= "2.6.0"}
+]
+pin-depends: [
+  ["coq-category-theory.dev" "git+https://github.com/jwiegley/category-theory.git#37f1cf6b23b14685a3df943f09e42da0046b2db7"]
+]
+
+tags: [
+  "logpath:CwFdeBruijn"
+]
+authors: [
+  "Matteo Calosci"
+]

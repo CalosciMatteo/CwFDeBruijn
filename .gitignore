@@ -1,0 +1,12 @@
+/.github
+/.vscode
+/Makefile.coq
+/Makefile.coq.conf
+/test.v
+*.vo
+*.vok
+*.vos
+*.aux
+*.glob
+*.Makefile.coq.d
+*.lia.cache
